@@ -1,18 +1,109 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas Cloud Computing</title>
+    <title>Implementasi PaaS - Ferdian Maulidin</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full text-center">
-        <h1 class="text-2xl font-bold text-blue-600 mb-4">Implementasi Cloud Computing</h1>
-        <p class="text-gray-700 mb-2">Ini adalah website sederhana yang di-hosting menggunakan layanan Platform as a Service (PaaS) Vercel.</p>
-        <div class="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-md">
-            <p class="text-sm text-gray-600">Dibuat untuk memenuhi Tugas Ujian Akhir Semester</p>
+<body class="bg-zinc-950 text-zinc-300 font-sans antialiased selection:bg-blue-600 selection:text-white">
+    
+    <main class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+        
+        <!-- Header Section -->
+        <header class="mb-16 fade-in-up">
+            <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-blue-400 uppercase bg-blue-900/30 border border-blue-800/50 rounded-full">
+                Ujian Akhir Semester Genap 2025/2026
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                Arsitektur <span class="text-blue-500">Cloud Computing.</span>
+            </h1>
+            <p class="text-lg text-zinc-400 max-w-2xl leading-relaxed">
+                Implementasi layanan Platform as a Service (PaaS) menggunakan infrastruktur Vercel untuk mendistribusikan antarmuka web modern secara global.
+            </p>
+        </header>
+
+        <!-- Grid Content -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 fade-in-up delay-1">
+            
+            <!-- Card 1: Data Mahasiswa -->
+            <div class="bg-zinc-900/50 border border-zinc-800 p-8 rounded-2xl hover:border-blue-500/50 transition-colors duration-300">
+                <h2 class="text-xl font-bold text-white mb-4">Identitas Mahasiswa</h2>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex justify-between border-b border-zinc-800 pb-2">
+                        <span class="font-medium text-zinc-500">Nama Lengkap</span> 
+                        <span class="text-zinc-200">Ferdian Maulidin</span>
+                    </li>
+                    <li class="flex justify-between border-b border-zinc-800 pb-2">
+                        <span class="font-medium text-zinc-500">Program Studi</span> 
+                        <span class="text-zinc-200">Teknik Informatika</span>
+                    </li>
+                    <li class="flex justify-between pb-2">
+                        <span class="font-medium text-zinc-500">Semester / Kelas</span> 
+                        <span class="text-zinc-200">6C</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Card 2: Spesifikasi Cloud -->
+            <div class="bg-zinc-900/50 border border-zinc-800 p-8 rounded-2xl hover:border-blue-500/50 transition-colors duration-300">
+                <h2 class="text-xl font-bold text-white mb-4">Spesifikasi Deployment</h2>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex justify-between border-b border-zinc-800 pb-2">
+                        <span class="font-medium text-zinc-500">Cloud Provider</span> 
+                        <span class="text-zinc-200">Vercel</span>
+                    </li>
+                    <li class="flex justify-between border-b border-zinc-800 pb-2">
+                        <span class="font-medium text-zinc-500">Model Layanan</span> 
+                        <span class="text-zinc-200">Public Cloud (PaaS)</span>
+                    </li>
+                    <li class="flex justify-between pb-2">
+                        <span class="font-medium text-zinc-500">Version Control</span> 
+                        <span class="text-zinc-200">GitHub CI/CD</span>
+                    </li>
+                </ul>
+            </div>
+
         </div>
-    </div>
+
+        <!-- Architecture Section -->
+        <section class="bg-gradient-to-br from-blue-950/40 to-zinc-900 border border-blue-900/30 p-8 md:p-10 rounded-3xl fade-in-up delay-2">
+            <h2 class="text-2xl font-bold text-blue-400 mb-4">Topologi Sistem Terdistribusi</h2>
+            <p class="text-zinc-300 leading-relaxed mb-8 text-sm md:text-base">
+                Sistem ini memanfaatkan Edge Network untuk mendistribusikan aset statis secara instan. Kode sumber dikelola melalui sistem versioning control, yang secara otomatis memicu proses build dan deployment tanpa memerlukan konfigurasi server fisik secara manual.
+            </p>
+            
+            <div class="flex flex-wrap gap-3">
+                <span class="px-4 py-2 bg-blue-900/20 text-blue-300 rounded-full text-xs font-semibold tracking-wide border border-blue-800/50">HTML5</span>
+                <span class="px-4 py-2 bg-blue-900/20 text-blue-300 rounded-full text-xs font-semibold tracking-wide border border-blue-800/50">Tailwind CSS</span>
+                <span class="px-4 py-2 bg-blue-900/20 text-blue-300 rounded-full text-xs font-semibold tracking-wide border border-blue-800/50">Edge Network</span>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-20 pt-8 border-t border-zinc-900 text-center fade-in-up delay-3">
+            <p class="text-zinc-600 text-sm tracking-wide">
+                Disusun untuk memenuhi Tugas Unjuk Kerja Praktik Cloud Computing.
+            </p>
+        </footer>
+
+    </main>
 </body>
 </html>
